@@ -23,23 +23,23 @@
         </div>
         <button type="submit" :disabled="!agreed"
           class="w-full text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:bg-blue-300">登录</button>
-
       </form>
       <div class="mt-6">
-        <table class="min-w-full border-collapse block md:table">
-          <thead class="block md:table-header-group">
-            <tr class="border md:table-row">
-              <th class="block md:table-cell">用户名</th>
-              <th class="block md:table-cell">密码</th>
+        <table class="min-w-full border-collapse block md:table border border-gray-200">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-4 py-2 border-b border-gray-200 block md:table-cell">用户名</th>
+              <th class="px-4 py-2 border-b border-gray-200 block md:table-cell">密码</th>
             </tr>
           </thead>
-          <tbody class="block md:table-row-group">
-            <tr class="border md:table-row" v-for="(account, index) in accounts" :key="index">
-              <td class="block md:table-cell">{{ account.username }}</td>
-              <td class="block md:table-cell">{{ account.password }}</td>
+          <tbody>
+            <tr class="border-b border-gray-200 md:table-row" v-for="(account, index) in accounts" :key="index">
+              <td class="px-4 py-2 block md:table-cell">{{ account.username }}</td>
+              <td class="px-4 py-2 block md:table-cell">{{ account.password }}</td>
             </tr>
           </tbody>
         </table>
+
       </div>
     </div>
   </div>
